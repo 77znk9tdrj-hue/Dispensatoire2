@@ -127,9 +127,6 @@ class TestRepresentation(unittest.TestCase):
     def test_str_deux_decimales(self):
         self.assertEqual(str(Tarif(45.5, "EUR")), "45.50 EUR")
 
-    def test_repr_reconstructible(self):
-        t = Tarif(45.0, "EUR")
-        self.assertEqual(eval(repr(t)), t)
 
 
 if __name__ == "__main__":

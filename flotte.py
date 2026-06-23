@@ -37,7 +37,7 @@ class Flotte:
             raise TypeError()
         if vehicule not in self:
             raise KeyError()
-        self._vehicules.remove(vehicule)
+        self._vehicule.remove(vehicule)
 
     # --- Protocole de conteneur ---
 
@@ -60,7 +60,6 @@ class Flotte:
         # Itérer dans l'ordre d'ajout.
         return iter(self._vehicule)
 
-
     # --- Méthodes métier ---
 
     def trouver_par_chassis(self, numero_chassis):
@@ -72,7 +71,7 @@ class Flotte:
 
     def vehicules_disponibles(self):
         # Liste des véhicules dont disponible vaut True, dans l'ordre d'ajout.
-        return[
+        return [
             v for v in self._vehicule
             if v.disponible
         ]
@@ -84,4 +83,4 @@ class Flotte:
     # --- Représentation ---
 
     def __repr__(self):
-        return f"flotte({self._vehicule!r})"
+        return f"Flotte({self._vehicule!r})"
